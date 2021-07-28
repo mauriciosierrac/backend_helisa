@@ -15,8 +15,8 @@ router.post('/', function(req, res) {
 
 router.get('/', function(req, res){
     controller.listarPaciente()
-    .then(pacientes => {
-        response.success(req, res, pacientes, 200)
+    .then(data => {
+        response.success(req, res, data, 200)
     })
     .catch(err =>{
         response.error(req, res, 'Internal Error', 500, err)

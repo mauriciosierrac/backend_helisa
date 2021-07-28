@@ -15,7 +15,6 @@ const mySchema = new Schema({
         type: Schema.ObjectId,
         ref: 'Especialidad'
     },
-    date: Date,
 })
 
 const model = mongoose.model('Personal', mySchema)

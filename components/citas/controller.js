@@ -1,21 +1,28 @@
 const store = require('./store')
 
-function crearCita(date, paciente, medico, enfermera, procedimientoRealizado){
-    if(!paciente || !medico){
-        return Promise.reject('Invalid name')
-    }
-    const citas = {
-        date: new Date(),
-        paciente: paciente,
-        medico: medico,
-        enfermera: enfermera,
-        procedimientoRealizado: procedimientoRealizado,
-    }
-    return store.add(citas)
+function crearCita(paciente, atendidoPor, ProcedimientoRealizado) {
+    return new Promise((resolve, reject) => {
+
+        if (!paciente) {
+            console.error('[Citas Error] no ingreso datos exigidos')
+            reject('Invalid name')
+            return false
+        }
+        const citas = {
+            date: new Date(),
+            paciente: paciente,
+            atendidoPor: atendidoPor,
+            ProcedimientoRealizado: ProcedimientoRealizado,
+        }
+        store.add(citas)
+        resolve(citas)
+    })
 }
 
-function listarCita(){
-    return store.list()
+function listarCita(pacienteId) {
+    return new Promise((resolve, reject) => {
+        resolve(store.list(pacienteId))
+    })
 }
 
 module.exports = {

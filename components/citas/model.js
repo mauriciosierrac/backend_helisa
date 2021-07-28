@@ -8,11 +8,7 @@ const mySchema = new Schema({
         type: Schema.ObjectId,
         ref: 'Paciente',
     },
-    medico: {
-        type: Schema.ObjectId,
-        ref: 'Personal',
-    },
-    enfermera: {
+    atendidoPor: {
         type: Schema.ObjectId,
         ref: 'Personal',
     },

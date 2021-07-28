@@ -15,8 +15,8 @@ router.post('/', function(req, res) {
 
 router.get('/', function(req, res){
     controller.listarProfesion()
-    .then(profesion => {
-        response.success(req, res, profesion, 200)
+    .then(data => {
+        response.success(req, res, data, 200)
     })
     .catch(err =>{
         response.error(req, res, 'Internal Error', 500, err)

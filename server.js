@@ -24,3 +24,5 @@ app.use(config.publicRoute, express)
 server.listen(config.port, () => {
     console.log('Running in ' + config.host + ':' + config.port)
 }) 
+
+module.exports = server

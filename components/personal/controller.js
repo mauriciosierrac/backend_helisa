@@ -1,8 +1,8 @@
 const store = require('./store')
 
 function crearPersonal(name, edad, direccion, telefono, profesion, especialidad){
-    return Promise.reject((resolve, reject) => {
-        if (!name || !profesion){
+    return new Promise((resolve, reject) => {
+        if (!name){
             console.error('[PersonalError] no ingreso datos exigidos')
             reject('Los datos son incorrectos')
             return false
@@ -14,7 +14,6 @@ function crearPersonal(name, edad, direccion, telefono, profesion, especialidad)
             telefono: telefono,
             profesion: profesion,
             especialidad: especialidad,
-            date: new Date(),
         }
         store.add(datosPersonal)
         resolve(datosPersonal)
