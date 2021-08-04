@@ -1,5 +1,6 @@
 <div align="center" id="top"> 
-  <img src="./.github/app.gif" alt="Backend_helisa" />
+  
+  ![Helisa Soft](https://github.com/mauriciosierrac/backend_helisa/blob/main/public/images/helisa.png)
 
   &#xa0;
 
