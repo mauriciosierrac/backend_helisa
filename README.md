@@ -58,7 +58,7 @@ Backend realizado como testing para la empresa helisa Soft
 
 The following tools were used in this project:
 
-- [Expo](https://expo.io/)
+- [Express](https://www.npmjs.com/package/express)
 - [Node.js](https://nodejs.org/en/)
 - [React](https://pt-br.reactjs.org/)
 - [React Native](https://reactnative.dev/)
